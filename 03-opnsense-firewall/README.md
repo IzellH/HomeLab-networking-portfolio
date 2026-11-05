@@ -21,13 +21,12 @@ Project Objectives
 
 Lab Environment
 
-Component| Description
-Hypervisor| Proxmox VE
-Firewall| OPNsense
-Client VM| Ubuntu Desktop
-Virtual Networking| Proxmox Linux bridges
-Physical Networking| Gigabit Ethernet
-Upstream Network| Existing home router
+- Hypervisor: Proxmox VE
+- Firewall: OPNsense
+- Client VM: Ubuntu Desktop
+- Virtual Networking: Proxmox Linux bridges
+- Physical Networking: Gigabit Ethernet
+- Upstream Network: Existing home router
 
 Network Architecture
 
@@ -58,17 +57,33 @@ Implementation Progress
 
 Initial Connectivity Testing
 
-Initial tests were performed from the Ubuntu Desktop virtual machine.
+Initial connectivity tests were performed from the Ubuntu Desktop virtual machine.
 
-Test| Result
-Connectivity to OPNsense LAN gateway| Passed
-Connectivity to external IP (1.1.1.1)| Passed
-Packet loss during gateway test| 0%
-Packet loss during external IP test| 0%
-OPNsense traffic graph| Observed inbound/outbound traffic
-DNS resolution| Pending
+Test 1 — LAN Gateway Connectivity
 
-These results confirm basic gateway connectivity and outbound IP routing. DNS resolution and firewall isolation still require separate validation.
+- Destination: OPNsense LAN gateway
+- Result: Passed
+- Packet Loss: 0%
+
+Test 2 — External IP Connectivity
+
+- Destination: "1.1.1.1"
+- Result: Passed
+- Packet Loss: 0%
+
+Test 3 — Firewall Traffic Monitoring
+
+- OPNsense dashboard displayed inbound and outbound traffic.
+- Result: Traffic activity observed.
+
+Pending Tests
+
+- DNS resolution.
+- Firewall rule validation.
+- NAT verification.
+- Network isolation testing.
+
+These initial results confirm basic gateway connectivity and outbound IP routing. DNS resolution and firewall isolation still require separate validation.
 
 Documentation
 
